@@ -20,6 +20,22 @@ $max-width: 80rem;
 	box-sizing: border-box;
 }
 
+.image {
+	&__svg {
+		max-width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		&--left {
+			object-position: left;
+		}
+
+		&--right {
+			object-position: right;
+		}
+	}
+}
+
 .header {
 	width: 100%;
 	background-image: url(./images/bg-hero-desktop.svg);
@@ -54,7 +70,7 @@ $max-width: 80rem;
 		border: none;
 		box-shadow: 0 0.25rem 1rem #00000020;
 		border-radius: 50px;
-		padding: 1ch 1ch;
+		padding: 1rem;
 		max-width: 20ch;
 		width: 100%;
 	}
@@ -71,13 +87,14 @@ $max-width: 80rem;
 	&__title {
 		font-family: $ff-headings;
 		font-size: 2.6rem;
-		overflow-wrap: break-word;
+		color: $c-n-dark-cyan;
 	}
 
 	&__text {
 		font-family: $ff-body;
 		font-size: 1.1rem;
 		font-weight: 500;
+		color: $c-n-dark-cyan;
 	}
 
 	&__button {
@@ -85,19 +102,86 @@ $max-width: 80rem;
 		color: white;
 		border: none;
 		border-radius: 50px;
-		padding: 2ch;
+		padding: 1rem;
 		max-width: 35ch;
 		width: 100%;
 		font-family: $ff-body;
+		font-weight: 600;
 		box-shadow: 0 0.5rem 0.5rem color.adjust($c-p-pink, $alpha: -0.9);
 	}
 }
 
-.image {
-	&__svg {
-		max-width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: left;
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin: 10rem 0 20rem 0;
+	position: relative;
+}
+
+.article {
+	margin: 0 auto;
+	max-width: $max-width;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem 2rem 3rem 5rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 0.5rem #00000020;
+
+	&--reverse {
+		flex-direction: row-reverse;
+	}
+
+	&__content {
+		width: 50%;
+	}
+
+	&__title {
+		font-family: $ff-headings;
+		font-size: 1.8rem;
+		color: $c-n-dark-cyan;
+	}
+
+	&__text {
+		font-family: $ff-body;
+		font-size: 1.1rem;
+		color: $c-n-grayish-blue;
+	}
+
+	&__image {
+		height: 20rem;
+	}
+}
+
+.tag {
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 1rem;
+	box-shadow: 0 0 0.5rem #00000020;
+	padding: 3rem 5rem;
+	gap: 2rem;
+	bottom: -5rem;
+
+	&__title {
+		font-family: $ff-headings;
+		font-size: 2rem;
+	}
+
+	&__button {
+		background-color: $c-p-pink;
+		font-family: $ff-body;
+		font-weight: 600;
+		font-size: 1.1rem;
+		color: white;
+		padding: 2rem;
+		border: none;
+		max-width: 25rem;
+		width: 100%;
+		border-radius: 50px;
+		box-shadow: 0 0.5rem 1rem #00000020;
 	}
 }
