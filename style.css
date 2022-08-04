@@ -20,6 +20,12 @@
   -o-object-position: right;
      object-position: right;
 }
+@media screen and (max-width: 768px) {
+  .image__svg--left, .image__svg--right {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
 
 .header {
   width: 100%;
@@ -138,7 +144,12 @@
   gap: 3rem;
   margin-top: 10rem;
   position: relative;
-  padding: 0 1rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 7rem;
+  }
 }
 
 .article {
@@ -150,23 +161,49 @@
   gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   border-radius: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1254901961);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.062745098);
 }
 .article--reverse {
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 768px) {
+  .article {
+    padding: 8rem 5rem 6rem 5rem;
+    gap: 8rem;
+    text-align: center;
+  }
+  .article--normal, .article--reverse {
+    flex-direction: column;
+  }
+}
 .article__content {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .article__content {
+    width: unset;
+  }
 }
 .article__title {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   color: hsl(192deg, 100%, 9%);
 }
+@media screen and (max-width: 768px) {
+  .article__title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
 .article__text {
   font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
   color: hsl(208deg, 11%, 55%);
+}
+@media screen and (max-width: 768px) {
+  .article__text {
+    font-size: 1.8rem;
+  }
 }
 .article__image {
   height: 20rem;
@@ -184,6 +221,13 @@
   gap: 2rem;
   bottom: -5rem;
   background-color: white;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .tag {
+    padding: 3rem;
+    width: 100%;
+  }
 }
 .tag__title {
   font-family: "Poppins", sans-serif;
@@ -204,7 +248,7 @@
 }
 
 .footer {
-  padding: 10rem 1rem 5rem 1rem;
+  padding: 10rem 2rem 5rem 2rem;
   background-color: hsl(192deg, 100%, 9%);
 }
 .footer__wrapper {
@@ -214,9 +258,20 @@
   gap: 2rem;
   grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
 }
+@media screen and (max-width: 768px) {
+  .footer__wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+}
 .footer__logo {
   grid-column: 1/5;
-  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .footer__logo {
+    grid-column: unset;
+    height: 3rem;
+  }
 }
 .footer__column {
   display: flex;
@@ -224,23 +279,20 @@
   gap: 1rem;
   list-style: none;
 }
+@media screen and (max-width: 768px) {
+  .footer__column {
+    gap: 3rem;
+  }
+}
 .footer__item {
   font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
-  color: hsl(208deg, 11%, 55%);
+  color: hsl(193deg, 100%, 96%);
 }
-.footer__socials {
-  display: flex;
-  gap: 1rem;
-}
-.footer__attribution {
-  grid-column: 1/5;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.8rem;
-  color: hsl(208deg, 11%, 55%);
-  text-align: end;
+@media screen and (max-width: 768px) {
+  .footer__item {
+    font-size: 2rem;
+  }
 }
 .footer__info {
   display: grid;
@@ -248,25 +300,68 @@
   margin-right: 5rem;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .footer__info {
+    grid-template-columns: 5rem auto;
+    margin-right: unset;
+  }
+}
 .footer__text {
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  color: hsl(208deg, 11%, 55%);
+  color: hsl(193deg, 100%, 96%);
+}
+@media screen and (max-width: 768px) {
+  .footer__text {
+    font-size: 2rem;
+  }
 }
 .footer__icon {
   display: grid;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .footer__icon {
+    height: 2rem;
+  }
+}
 .footer__social-container {
   display: flex;
   gap: 0.5rem;
 }
+@media screen and (max-width: 768px) {
+  .footer__social-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
 .footer__social {
   width: 2rem;
   height: 2rem;
-  border: 1px solid hsl(208deg, 11%, 55%);
+  border: 1px solid hsl(193deg, 100%, 96%);
   border-radius: 50%;
   display: grid;
   place-items: center;
   padding: 0.5rem;
+  box-sizing: content-box;
+}
+@media screen and (max-width: 768px) {
+  .footer__social {
+    padding: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.footer__attribution {
+  grid-column: 1/5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  color: hsl(193deg, 100%, 96%);
+  text-align: end;
+}
+@media screen and (max-width: 768px) {
+  .footer__attribution {
+    grid-column: unset;
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */
