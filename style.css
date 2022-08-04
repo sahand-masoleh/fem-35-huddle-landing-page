@@ -27,20 +27,88 @@
   background-color: hsl(193deg, 100%, 96%);
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background-image: url(./images/bg-hero-mobile.svg);
+  }
 }
 .header__wrapper {
   max-width: 80rem;
-  padding: 4rem 1rem 4rem 1rem;
+  padding: 4rem 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+}
+@media screen and (max-width: 768px) {
+  .header__wrapper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .header__content {
+    align-items: center;
+    text-align: center;
+  }
+}
+.header__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  color: hsl(192deg, 100%, 9%);
+}
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+.header__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: hsl(192deg, 100%, 9%);
+}
+@media screen and (max-width: 768px) {
+  .header__text {
+    font-size: 2rem;
+  }
+}
+.header__button {
+  background-color: hsl(322deg, 100%, 66%);
+  color: hsl(193deg, 100%, 96%);
+  border: none;
+  border-radius: 50px;
+  padding: 1.5rem;
+  max-width: 35ch;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 0.5rem 0.5rem rgba(255, 82, 191, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .header__button {
+    font-size: 1.5rem;
+  }
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   grid-column: 1/3;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    grid-column: unset;
+  }
 }
 .nav__logo {
   height: 2rem;
@@ -50,6 +118,7 @@
   font-weight: 700;
   font-size: 1rem;
   background-color: white;
+  color: hsl(192deg, 100%, 9%);
   border: none;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1254901961);
   border-radius: 50px;
@@ -57,37 +126,10 @@
   max-width: 20ch;
   width: 100%;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-right: 5rem;
-  margin-bottom: 5rem;
-  gap: 2rem;
-}
-.content__title {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.6rem;
-  color: hsl(192deg, 100%, 9%);
-}
-.content__text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: hsl(192deg, 100%, 9%);
-}
-.content__button {
-  background-color: hsl(322deg, 100%, 66%);
-  color: hsl(193deg, 100%, 96%);
-  border: none;
-  border-radius: 50px;
-  padding: 1rem;
-  max-width: 35ch;
-  width: 100%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  box-shadow: 0 0.5rem 0.5rem rgba(255, 82, 191, 0.1);
+@media screen and (max-width: 768px) {
+  .nav__button {
+    font-size: 1.2rem;
+  }
 }
 
 .main {
@@ -96,6 +138,7 @@
   gap: 3rem;
   margin-top: 10rem;
   position: relative;
+  padding: 0 1rem;
 }
 
 .article {
@@ -104,6 +147,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   padding: 3rem 2rem 3rem 5rem;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1254901961);
@@ -198,20 +242,26 @@
   color: hsl(208deg, 11%, 55%);
   text-align: end;
 }
-
-.info {
+.footer__info {
   display: grid;
   grid-template-columns: 2rem auto;
   margin-right: 5rem;
   align-items: center;
 }
-.info__text {
+.footer__text {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   color: hsl(208deg, 11%, 55%);
 }
-
-.social {
+.footer__icon {
+  display: grid;
+  align-items: center;
+}
+.footer__social-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.footer__social {
   width: 2rem;
   height: 2rem;
   border: 1px solid hsl(208deg, 11%, 55%);
@@ -219,9 +269,4 @@
   display: grid;
   place-items: center;
   padding: 0.5rem;
-}
-.social__svg {
-  filter: invert(100%);
-  width: 100%;
-  height: 100%;
 }/*# sourceMappingURL=style.css.map */
