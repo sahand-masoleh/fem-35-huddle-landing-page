@@ -262,6 +262,7 @@ $min-margin: min(2rem, 10%);
 	}
 
 	&__image {
+		max-width: 25rem;
 		width: 100%;
 	}
 }

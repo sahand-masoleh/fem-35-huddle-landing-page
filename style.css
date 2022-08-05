@@ -244,6 +244,7 @@
   }
 }
 .article__image {
+  max-width: 25rem;
   width: 100%;
 }
 
