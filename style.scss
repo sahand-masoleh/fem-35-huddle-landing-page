@@ -112,6 +112,19 @@ $max-width: 80rem;
 		font-family: $ff-body;
 		font-weight: 600;
 		box-shadow: 0 0.5rem 0.5rem color.adjust($c-p-pink, $alpha: -0.9);
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			cursor: pointer;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: white;
+				opacity: 0.5;
+			}
+		}
 
 		@media screen and (max-width: 768px) {
 			font-size: 1.5rem;
@@ -146,6 +159,19 @@ $max-width: 80rem;
 		padding: 1rem;
 		max-width: 20ch;
 		width: 100%;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			cursor: pointer;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: white;
+				opacity: 0.5;
+			}
+		}
 
 		@media screen and (max-width: 768px) {
 			font-size: 1.2rem;
@@ -262,6 +288,19 @@ $max-width: 80rem;
 		width: 100%;
 		border-radius: 50px;
 		box-shadow: 0 0.5rem 1rem #00000020;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			cursor: pointer;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: white;
+				opacity: 0.5;
+			}
+		}
 	}
 }
 
@@ -284,6 +323,7 @@ $max-width: 80rem;
 
 	&__logo {
 		grid-column: 1/5;
+		height: 1.5rem;
 
 		@media screen and (max-width: 768px) {
 			grid-column: unset;
@@ -304,8 +344,13 @@ $max-width: 80rem;
 
 	&__item {
 		font-family: $ff-body;
-		font-size: 1.1rem;
 		color: $c-n-pale-cyan;
+		width: max-content;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 
 		@media screen and (max-width: 768px) {
 			font-size: 2rem;
@@ -327,6 +372,7 @@ $max-width: 80rem;
 	&__text {
 		font-family: $ff-body;
 		color: $c-n-pale-cyan;
+		font-size: 0.8rem;
 
 		@media screen and (max-width: 768px) {
 			font-size: 2rem;
@@ -361,11 +407,28 @@ $max-width: 80rem;
 		place-items: center;
 		padding: 0.5rem;
 		box-sizing: content-box;
+		width: 1rem;
+		height: 1rem;
 
 		@media screen and (max-width: 768px) {
 			padding: 1rem;
 			width: 2.5rem;
 			height: 2.5rem;
+		}
+
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			border-color: $c-p-pink;
+			cursor: pointer;
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: $c-p-pink;
+				mix-blend-mode: multiply;
+			}
 		}
 	}
 
